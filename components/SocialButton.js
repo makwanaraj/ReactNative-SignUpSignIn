@@ -1,7 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {windowHeight, windowWidth} from '../utilities/Dimensions';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { windowHeight, windowWidth } from '../utilities/Dimensions';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+
 
 const SocialButton = ({
   buttonTitle,
@@ -14,7 +15,7 @@ const SocialButton = ({
 
   return (
     <TouchableOpacity
-      style={[styles.buttonContainer, {backgroundColor: bgColor}]}
+      style={[styles.buttonContainer, { backgroundColor: bgColor }]}
       {...rest}>
       <View style={styles.iconWrapper}>
         <FontAwesome
@@ -25,7 +26,7 @@ const SocialButton = ({
         />
       </View>
       <View style={styles.btnTxtWrapper}>
-        <Text style={(styles.buttonText, {color: color})}></Text>
+        <Text style={(styles.buttonText, { color: color })}>{buttonTitle}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -50,9 +51,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  icon: {fontWeight: 'bold'},
+  icon: { fontWeight: 'bold' },
 
-  btnTxtWrapper: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  btnTxtWrapper: { flex: 1, justifyContent: 'center', alignItems: 'center' },
 
   buttonText: {
     fontSize: 18,
